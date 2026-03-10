@@ -225,7 +225,7 @@ struct example {
 
 c_eof = cstruct().load(eof_def)
 
-example = eof_struct.example(b"9\x05\x00\x00arbitrary length data")
+example = c_eof.example(b"9\x05\x00\x00arbitrary length data")
 assert example.magic == 1337
 assert example.data == b"arbitrary length data"
 ```
