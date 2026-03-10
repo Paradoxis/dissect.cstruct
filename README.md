@@ -220,7 +220,7 @@ eof_def = """
 struct example {
     uint32 magic;
     char data[EOF];
-}
+};
 """
 
 c_eof = cstruct().load(eof_def)
