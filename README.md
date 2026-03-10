@@ -211,7 +211,7 @@ The API to access enum and flag members and their values in the same way as the 
 You can implement your own types by subclassing `BaseType`, and adding them to your cstruct instance with `add_custom_type(name, type, size, alignment, ...)`
 
 ### Dynamic length fields
-The API includes a magic `EOF` size which will make the parser read all remaining data fed to it. For example:
+To read all remaining data in the provided buffer/stream, you can use the magic `EOF` size variable. This will automatically expand until the end of the stream has been reached and works for any field type. For example:
 
 ```python
 from dissect.cstruct import cstruct
